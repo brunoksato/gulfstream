@@ -209,6 +209,7 @@
   position: relative;
   transition: unset;
   opacity: 1;
+  word-break: break-all !important;
 }
 
 .notion-link:hover {
