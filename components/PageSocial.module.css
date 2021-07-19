@@ -13,7 +13,7 @@
   transition: all 300ms ease-out;
   width: 3.5em;
   height: 3.5em;
-  margin: 0 0 1em;
+  margin: 0 0 0.3em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,6 +21,10 @@
   text-decoration: none !important;
   user-select: none;
   cursor: pointer;
+}
+
+.action ~ span {
+  margin: 0 0 1em;
 }
 
 .action:last-child {

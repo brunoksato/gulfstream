@@ -40,12 +40,19 @@ export const pageUrlAdditions = cleanPageUrlMap(
 export const name: string = getSiteConfig('name')
 export const author: string = getSiteConfig('author')
 export const domain: string = getSiteConfig('domain')
-export const description: string = getSiteConfig('description', 'Notion Blog')
+export const description: string = getSiteConfig(
+  'description',
+  'GulfStream Website'
+)
 
-// social accounts
-export const twitter: string | null = getSiteConfig('twitter', null)
-export const github: string | null = getSiteConfig('github', null)
-export const linkedin: string | null = getSiteConfig('linkedin', null)
+// grupo accounts
+export const wpp_avisos: string | null = getSiteConfig('wpp_avisos', null)
+export const wpp_geral: string | null = getSiteConfig('wpp_geral', null)
+export const wpp_instancias: string | null = getSiteConfig(
+  'wpp_instancias',
+  null
+)
+export const discord: string | null = getSiteConfig('discord', null)
 
 export const socialImageTitle: string | null = getSiteConfig(
   'socialImageTitle',

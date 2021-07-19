@@ -1,7 +1,7 @@
 /**
  * This file contains site-specifc style overrides for Notion elements from
  * react-notion-x.
- * 
+ *
  * react-notion-x's goal is to match styling as close as possible to Notion,
  * whereas our goal with this site is to adjust Notion's styling in a few key
  * places to add some flare.
@@ -174,8 +174,18 @@
 
 .notion-page-cover {
   max-width: 1200px;
+  object-fit: cover !important;
+  height: 230px !important;
+  min-height: 230px !important;
   border-radius: 24px;
   box-shadow: 2px 2px 8px 4px rgba(15, 15, 15, 0.1);
+}
+
+@media only screen and (max-width: 768px) {
+  .notion-page-cover {
+    height: auto !important;
+    min-height: auto !important;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
