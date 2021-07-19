@@ -26,10 +26,8 @@ import { CustomFont } from './CustomFont'
 import { Loading } from './Loading'
 import { Page404 } from './Page404'
 import { PageHead } from './PageHead'
-import { PageActions } from './PageActions'
 import { Footer } from './Footer'
 import { PageSocial } from './PageSocial'
-import { ReactUtterances } from './ReactUtterances'
 
 import styles from './styles.module.css'
 
@@ -130,22 +128,10 @@ export const NotionPage: React.FC<types.PageProps> = ({
   const socialDescription =
     getPageDescription(block, recordMap) ?? config.description
 
-  let comments: React.ReactNode = null
   let pageAside: React.ReactChild = null
 
   // only display comments and page actions on blog post pages
-  if (isBlogPost) {
-    if (config.utterancesGitHubRepo) {
-      comments = (
-        <ReactUtterances
-          repo={config.utterancesGitHubRepo}
-          issueMap='issue-term'
-          issueTerm='title'
-          theme={darkMode.value ? 'photon-dark' : 'github-light'}
-        />
-      )
-    }
-  } else {
+  if (!isBlogPost) {
     pageAside = <PageSocial />
   }
 
@@ -159,10 +145,6 @@ export const NotionPage: React.FC<types.PageProps> = ({
 
         <meta name='twitter:title' content={title} />
         <meta property='twitter:domain' content={site.domain} />
-
-        {config.twitter && (
-          <meta name='twitter:creator' content={`@${config.twitter}`} />
-        )}
 
         {socialDescription && (
           <>
@@ -248,7 +230,6 @@ export const NotionPage: React.FC<types.PageProps> = ({
         mapPageUrl={siteMapPageUrl}
         mapImageUrl={mapNotionImageUrl}
         searchNotion={searchNotion}
-        pageFooter={comments}
         pageAside={pageAside}
         footer={
           <Footer

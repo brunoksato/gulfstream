@@ -17,11 +17,8 @@
       "files": ["**/*.js", "**/*.jsx"],
       "parser": "babel-eslint",
       "extends": [
-        "standard",
         "standard-react",
-        "plugin:prettier/recommended",
-        "prettier/standard",
-        "prettier/react"
+        "plugin:prettier/recommended"
       ],
       "env": { "node": true },
       "rules": {
@@ -30,8 +27,7 @@
         "react/jsx-handler-names": 0,
         "react/jsx-fragments": 0,
         "react/no-unused-prop-types": 0,
-        "import/export": 0,
-        "standard/no-callback-literal": 0
+        "import/export": 0
       }
     },
     {
@@ -40,11 +36,8 @@
       "plugins": ["@typescript-eslint"],
       "extends": [
         "plugin:@typescript-eslint/recommended",
-        "standard",
         "standard-react",
-        "plugin:prettier/recommended",
-        "prettier/standard",
-        "prettier/react"
+        "plugin:prettier/recommended"
       ],
       "env": { "browser": true, "node": true },
       "rules": {
@@ -58,7 +51,6 @@
         "react/jsx-fragments": 0,
         "react/no-unused-prop-types": 0,
         "import/export": 0,
-        "standard/no-callback-literal": 0
       }
     }
   ]

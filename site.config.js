@@ -17,9 +17,10 @@ module.exports = {
   socialImageSubtitle: 'GulfStream',
 
   // social usernames (optional)
-  twitter: 'transitive_bs',
-  github: 'transitive-bullshit',
-  linkedin: 'fisch2',
+  wpp_avisos: 'https://chat.whatsapp.com/EJh7PRloYzdDqU0ijmwqbi',
+  wpp_geral: 'https://chat.whatsapp.com/Bm2BylJb7FTFYZQtXMBhhs',
+  wpp_instancias: 'https://chat.whatsapp.com/DoMKX5HlIEsFG0TawwpwnH',
+  discord: 'https://discord.gg/azDJCaD',
 
   // default notion icon and cover images for site-wide consistency (optional)
   // page-specific values will override these site-wide defaults
